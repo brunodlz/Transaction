@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
 
   s.name         = "Transaction"
-  s.version      = "1.0"
-  s.summary      = "Sample framework to transaction between segue"
+  s.version      = "1.0.0"
+  s.summary      = "Framework to transaction between segue"
   s.homepage     = "https://github.com/brunodlz/Transaction"
   s.license      = { type: 'MIT', file: 'LICENSE' }
   s.author             = { "Bruno da Luz" => "brunolabx@gmail.com" }
