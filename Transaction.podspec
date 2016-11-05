@@ -9,6 +9,7 @@ Pod::Spec.new do |s|
   s.social_media_url   = "http://twitter.com/brunodlz"
 
   s.platform     = :ios, "9.0"
+  s.requires_arc = true
   s.source       = { :git => "https://github.com/brunodlz/Transaction.git", :tag => "#{s.version}" }
   s.source_files = "Transaction", "Transaction/**/*.{h,swift}"
   
