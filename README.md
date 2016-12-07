@@ -45,3 +45,6 @@ override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 
 Please, don't hesitate to [file an
 issue](https://github.com/brunodlz/Transaction/issues/new) if you have questions.
+
+[![Twitter](https://img.shields.io/badge/twitter-@brunodlz-red.svg?style=flat)](https://twitter.com/brunodlz)
+
