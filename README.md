@@ -50,10 +50,22 @@ override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         }
     }
 ```
+
+## Demo
+
+- [x] Storyboard
+- [ ] ViewCode
+
 ## Support
 
 Please, don't hesitate to [file an
 issue](https://github.com/brunodlz/Transaction/issues/new) if you have questions.
 
-[![Twitter](https://img.shields.io/badge/twitter-@brunodlz-red.svg?style=flat)](https://twitter.com/brunodlz)
+## Author
+
+Bruno da Luz. :octocat: [GitHub](https://github.com/brunodlz) :bird: [Twitter](https://twitter.com/brunodlz)
+
+## License
+
+This project is distributed under the [MIT License](https://raw.githubusercontent.com/brunodlz/Transaction/develop/LICENSE)
 
