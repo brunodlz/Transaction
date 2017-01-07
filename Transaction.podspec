@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "Transaction"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "Framework to transaction between segue"
   s.homepage     = "https://github.com/brunodlz/Transaction"
   s.license      = { type: 'MIT', file: 'LICENSE' }
