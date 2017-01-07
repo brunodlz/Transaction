@@ -20,6 +20,15 @@ use_frameworks!
 
 Then run `pod install`
 
+## Swift Version
+
+Use the table below to determine which versions of Transaction are compatible with your project.
+
+|Swift version        |Transaction version |
+|:--------------------|:-------------------|
+|Swift 3              |v1.0.1 or later     |
+|Swift 2.2 / Swift 2.3|v1.0.0              |
+
 ## Usage
 
 ```Swift
