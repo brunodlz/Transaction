@@ -38,15 +38,15 @@ import Transaction
 override func viewDidLoad() {
         super.viewDidLoad()
 
-        performSegueWithIdentifier("FlowOne", sender: nil)
+        performSegue(withIdentifier: Segue.First.rawValue, sender: nil)
     }
 ```
 ```Swift
-override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "FlowOne" {
-            transaction.startOn(self, withSegue: segue, options: .TransitionFlipFromTop)
-        } else if segue.identifier == "FlowTwo" {
-            transaction.startOn(self, withSegue: segue, options: .TransitionFlipFromRight)
+override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Segue.First.rawValue {
+            animation.startOn(current: self, with: segue, options: .transitionFlipFromRight)
+        } else if segue.identifier == Segue.Second.rawValue {
+            animation.startOn(current: self, with: segue, options: .transitionFlipFromLeft)
         }
     }
 ```
