@@ -21,6 +21,13 @@ class FirstViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func showNextFlow(_ sender: Any) {
+        guard let controller = parent as? ViewController else {
+            return
+        }
+        
+        controller.showSecondSegue()
+    }
 
     /*
     // MARK: - Navigation

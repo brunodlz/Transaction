@@ -79,6 +79,9 @@
                                 <state key="normal" title="→">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="showNextFlow:" destination="mAL-ls-W5O" eventType="touchUpInside" id="T04-cF-wPd"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q49-xe-mZk">
                                 <rect key="frame" x="130" y="90" width="40" height="21"/>
@@ -123,6 +126,9 @@
                                 <state key="normal" title="←">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="backToTheFlow:" destination="9E4-Oa-NnV" eventType="touchUpInside" id="JzF-Cf-6Hl"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tga-Ez-INg">
                                 <rect key="frame" x="121" y="90" width="59" height="21"/>
