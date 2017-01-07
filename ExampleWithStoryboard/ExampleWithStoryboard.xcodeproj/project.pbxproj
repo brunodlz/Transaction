@@ -12,6 +12,9 @@
 		151C34FB1E2157B200B22E8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 151C34F91E2157B200B22E8F /* Main.storyboard */; };
 		151C34FD1E2157B200B22E8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 151C34FC1E2157B200B22E8F /* Assets.xcassets */; };
 		151C35001E2157B200B22E8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 151C34FE1E2157B200B22E8F /* LaunchScreen.storyboard */; };
+		151C35081E215A5B00B22E8F /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151C35071E215A5B00B22E8F /* ContainerViewController.swift */; };
+		151C350A1E215A6500B22E8F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151C35091E215A6500B22E8F /* FirstViewController.swift */; };
+		151C350C1E215A6B00B22E8F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151C350B1E215A6B00B22E8F /* SecondViewController.swift */; };
 		DC6780AA0B8499DCFE465AA6 /* Pods_ExampleWithStoryboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4322704CADAA58494929AD0A /* Pods_ExampleWithStoryboard.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +26,9 @@
 		151C34FC1E2157B200B22E8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		151C34FF1E2157B200B22E8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		151C35011E2157B200B22E8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		151C35071E215A5B00B22E8F /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		151C35091E215A6500B22E8F /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		151C350B1E215A6B00B22E8F /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		1AE48C9FAAB0162090E550A2 /* Pods-ExampleWithStoryboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleWithStoryboard.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExampleWithStoryboard/Pods-ExampleWithStoryboard.release.xcconfig"; sourceTree = "<group>"; };
 		4322704CADAA58494929AD0A /* Pods_ExampleWithStoryboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExampleWithStoryboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5C7F3A791AD84FFDFEBEEEE /* Pods-ExampleWithStoryboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleWithStoryboard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ExampleWithStoryboard/Pods-ExampleWithStoryboard.debug.xcconfig"; sourceTree = "<group>"; };
@@ -63,6 +69,9 @@
 			children = (
 				151C34F51E2157B200B22E8F /* AppDelegate.swift */,
 				151C34F71E2157B200B22E8F /* ViewController.swift */,
+				151C35071E215A5B00B22E8F /* ContainerViewController.swift */,
+				151C35091E215A6500B22E8F /* FirstViewController.swift */,
+				151C350B1E215A6B00B22E8F /* SecondViewController.swift */,
 				151C34F91E2157B200B22E8F /* Main.storyboard */,
 				151C34FC1E2157B200B22E8F /* Assets.xcassets */,
 				151C34FE1E2157B200B22E8F /* LaunchScreen.storyboard */,
@@ -213,7 +222,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				151C34F81E2157B200B22E8F /* ViewController.swift in Sources */,
+				151C35081E215A5B00B22E8F /* ContainerViewController.swift in Sources */,
 				151C34F61E2157B200B22E8F /* AppDelegate.swift in Sources */,
+				151C350C1E215A6B00B22E8F /* SecondViewController.swift in Sources */,
+				151C350A1E215A6500B22E8F /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +389,7 @@
 				151C35061E2157B200B22E8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
