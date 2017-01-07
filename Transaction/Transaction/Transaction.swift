@@ -2,15 +2,8 @@ import Foundation
 
 protocol Presentable {
     func startOn(current: UIViewController,
-                 with: UIStoryboardSegue,
-                 options: UIViewAnimationOptions)
-    
-    func swapFrom(viewController: UIViewController,
-                  fromViewController: UIViewController,
-                  toViewController: UIViewController,
-                  options: UIViewAnimationOptions)
-    
-    func sizeFrom(viewController: UIViewController) -> CGSize
+                 with segue: UIStoryboardSegue,
+                 options animation: UIViewAnimationOptions)
 }
 
 open class Transaction : Presentable {
@@ -18,33 +11,41 @@ open class Transaction : Presentable {
     public init() {}
     
     open func startOn(current: UIViewController,
-                      with withSegue: UIStoryboardSegue,
-                      options: UIViewAnimationOptions) {
+                      with segue: UIStoryboardSegue,
+                      options animation: UIViewAnimationOptions) {
         
         guard current.childViewControllers.count > 0 else {
-            swapFrom(viewController: current,
-                     fromViewController: current.childViewControllers.last!,
-                     toViewController: withSegue.destination,
-                     options: options)
+            addChildViewController(current: current,
+                                   with: segue,
+                                   options: animation)
             return
         }
         
-        let size = sizeFrom(viewController: current)
-        
-        current.addChildViewController(withSegue.destination)
-        withSegue.destination.view.frame = CGRect(x: 0,
-                                                  y: 0,
-                                                  width: size.width,
-                                                  height: size.height)
-        
-        current.view.addSubview(withSegue.destination.view)
-        withSegue.destination.didMove(toParentViewController: current)
+        swapFrom(viewController: current,
+                 fromViewController: current.childViewControllers.last!,
+                 toViewController: segue.destination,
+                 options: animation)
     }
     
-    internal func swapFrom(viewController: UIViewController,
-                           fromViewController: UIViewController,
-                           toViewController: UIViewController,
-                           options: UIViewAnimationOptions) {
+    fileprivate func addChildViewController(current: UIViewController,
+                                            with segue: UIStoryboardSegue,
+                                            options: UIViewAnimationOptions) {
+        let size = sizeFrom(viewController: current)
+        
+        current.addChildViewController(segue.destination)
+        segue.destination.view.frame = CGRect(x: 0,
+                                              y: 0,
+                                              width: size.width,
+                                              height: size.height)
+        
+        current.view.addSubview(segue.destination.view)
+        segue.destination.didMove(toParentViewController: current)
+    }
+    
+    fileprivate func swapFrom(viewController: UIViewController,
+                              fromViewController: UIViewController,
+                              toViewController: UIViewController,
+                              options: UIViewAnimationOptions) {
         
         let size = sizeFrom(viewController: viewController)
         
@@ -66,7 +67,7 @@ open class Transaction : Presentable {
         }
     }
     
-    func sizeFrom(viewController: UIViewController) -> CGSize {
+    fileprivate func sizeFrom(viewController: UIViewController) -> CGSize {
         return viewController.view.frame.size
     }
     
