@@ -20,6 +20,15 @@ use_frameworks!
 
 Then run `pod install`
 
+## Swift Version
+
+Use the table below to determine which versions of Transaction are compatible with your project.
+
+|Swift version        |Transaction version |
+|:--------------------|:-------------------|
+|Swift 3              |v1.0.1 or later     |
+|Swift 2.2 / Swift 2.3|v1.0.0              |
+
 ## Usage
 
 ```Swift
@@ -29,22 +38,34 @@ import Transaction
 override func viewDidLoad() {
         super.viewDidLoad()
 
-        performSegueWithIdentifier("FlowOne", sender: nil)
+        performSegue(withIdentifier: Segue.First.rawValue, sender: nil)
     }
 ```
 ```Swift
-override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "FlowOne" {
-            transaction.startOn(self, withSegue: segue, options: .TransitionFlipFromTop)
-        } else if segue.identifier == "FlowTwo" {
-            transaction.startOn(self, withSegue: segue, options: .TransitionFlipFromRight)
+override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Segue.First.rawValue {
+            animation.startOn(current: self, with: segue, options: .transitionFlipFromRight)
+        } else if segue.identifier == Segue.Second.rawValue {
+            animation.startOn(current: self, with: segue, options: .transitionFlipFromLeft)
         }
     }
 ```
+
+## Demo
+
+- [x] Storyboard
+- [ ] ViewCode
+
 ## Support
 
 Please, don't hesitate to [file an
 issue](https://github.com/brunodlz/Transaction/issues/new) if you have questions.
 
-[![Twitter](https://img.shields.io/badge/twitter-@brunodlz-red.svg?style=flat)](https://twitter.com/brunodlz)
+## Author
+
+Bruno da Luz. :octocat: [GitHub](https://github.com/brunodlz) :bird: [Twitter](https://twitter.com/brunodlz)
+
+## License
+
+This project is distributed under the [MIT License](https://raw.githubusercontent.com/brunodlz/Transaction/develop/LICENSE)
 
