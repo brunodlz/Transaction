@@ -6,7 +6,7 @@ protocol Presentable {
                  animation: UIViewAnimationOptions)
 }
 
-open class Transaction : Presentable {
+open class Transaction: Presentable {
 
     public init() {}
 
@@ -21,11 +21,15 @@ open class Transaction : Presentable {
             return
         }
 
+        guard let viewController = current.childViewControllers.last else {
+            fatalError("should have a view controller")
+        }
+
         swapFrom(viewController: current,
-                 fromViewController: current.childViewControllers.last!,
+                 fromViewController: viewController,
                  toViewController: destination,
                  options: animation)
-    }
+}
 
     fileprivate func addChildViewController(current: UIViewController,
                                             destination: UIViewController,
