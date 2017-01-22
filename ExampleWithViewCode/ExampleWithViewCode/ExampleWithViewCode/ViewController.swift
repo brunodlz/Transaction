@@ -7,18 +7,42 @@
 //
 
 import UIKit
+import Transaction
+import SnapKit
 
 class ViewController: UIViewController {
 
+    let animation = Transaction()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        currentViewController()
+    }
 
+    func nextViewController() {
+
+    }
+
+    func backViewController() {
+        currentViewController()
+    }
+
+    fileprivate func currentViewController() {
+        let first = FirstViewController()
+
+        animation.startOn(current: self,
+                destination: first,
+                animation: .transitionFlipFromRight)
+
+        first.view.snp.makeConstraints { (make) in
+            make.center.equalTo(self.view)
+        }
+    }
 }
-
