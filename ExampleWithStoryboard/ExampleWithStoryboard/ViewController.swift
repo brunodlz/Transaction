@@ -22,9 +22,9 @@ class ViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Segue.First.rawValue {
-            animation.startOn(current: self, with: segue, options: .transitionFlipFromRight)
+            animation.startOn(current: self, destination: segue.destination, animation: .transitionFlipFromRight)
         } else if segue.identifier == Segue.Second.rawValue {
-            animation.startOn(current: self, with: segue, options: .transitionFlipFromLeft)
+            animation.startOn(current: self, destination: segue.destination, animation: .transitionFlipFromLeft)
         }
     }
     
