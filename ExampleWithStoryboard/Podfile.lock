@@ -1,12 +1,12 @@
 PODS:
-  - Transaction (1.0.2)
+  - Transaction (1.0.3)
 
 DEPENDENCIES:
-  - Transaction (~> 1.0.2)
+  - Transaction (~> 1.0.3)
 
 SPEC CHECKSUMS:
-  Transaction: 2e1f020ae28dc6e0d87d1837140fb33930c8ad5e
+  Transaction: 56a23d59b5044d0ac529279fcf7665c11ef4ec13
 
-PODFILE CHECKSUM: 9ef002751fc10ced69eb2693e7582bda4589e991
+PODFILE CHECKSUM: 5027ed73ffbfbbec24817e293270be9b9d1f2c69
 
 COCOAPODS: 1.1.1

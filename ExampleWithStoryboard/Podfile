@@ -3,6 +3,6 @@ platform :ios, '9.0'
 target 'ExampleWithStoryboard' do
   use_frameworks!
 
-  pod 'Transaction', '~> 1.0.2'
+  pod 'Transaction', '~> 1.0.3'
 
 end
