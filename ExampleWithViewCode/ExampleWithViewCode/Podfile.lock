@@ -1,0 +1,15 @@
+PODS:
+  - SnapKit (3.1.2)
+  - Transaction (1.0.2)
+
+DEPENDENCIES:
+  - SnapKit (~> 3.0)
+  - Transaction (~> 1.0.2)
+
+SPEC CHECKSUMS:
+  SnapKit: 12b24f569cb7c143acc9c22b9d91b23e7b1c84a2
+  Transaction: 2e1f020ae28dc6e0d87d1837140fb33930c8ad5e
+
+PODFILE CHECKSUM: 3904a64c03ef9be7aad6c02c757c1facebb2ff38
+
+COCOAPODS: 1.1.1
