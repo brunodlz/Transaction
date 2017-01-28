@@ -22,18 +22,25 @@ class ViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Segue.First.rawValue {
-            animation.startOn(current: self, destination: segue.destination, animation: .transitionFlipFromRight)
-        } else if segue.identifier == Segue.Second.rawValue {
-            animation.startOn(current: self, destination: segue.destination, animation: .transitionFlipFromLeft)
+            animation.startOn(current: self, 
+                              destination: segue.destination, 
+                              animation: .transitionFlipFromRight)
+        } 
+        else if segue.identifier == Segue.Second.rawValue {
+            animation.startOn(current: self, 
+                              destination: segue.destination, 
+                              animation: .transitionFlipFromLeft)
         }
     }
     
     func showFirstSegue() {
-        performSegue(withIdentifier: Segue.First.rawValue, sender: nil)
+        performSegue(withIdentifier: Segue.First.rawValue, 
+                     sender: nil)
     }
     
     func showSecondSegue() {
-        performSegue(withIdentifier: Segue.Second.rawValue, sender: nil)
+        performSegue(withIdentifier: Segue.Second.rawValue, 
+                     sender: nil)
     }
 }
 
