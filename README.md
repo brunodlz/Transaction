@@ -44,9 +44,13 @@ override func viewDidLoad() {
 ```Swift
 override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Segue.First.rawValue {
-            animation.startOn(current: self, destination: segue.destination, animation: .transitionFlipFromRight)
+            animation.startOn(current: self, 
+                              destination: segue.destination, 
+                              animation: .transitionFlipFromRight)
         } else if segue.identifier == Segue.Second.rawValue {
-            animation.startOn(current: self, destination: segue.destination, animation: .transitionFlipFromLeft)
+            animation.startOn(current: self, 
+                              destination: segue.destination, 
+                              animation: .transitionFlipFromLeft)
         }
     }
 ```
